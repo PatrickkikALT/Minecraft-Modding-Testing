@@ -14,8 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(BowItem.class)
 public class FlipjeBowMixin {
 	@Inject(at = @At("TAIL"), method = "shootProjectile")
-	private static void flipje$increaseArrowDamage(
-			LivingEntity livingEntity, Projectile projectile, int i, float f, float g, float h, LivingEntity livingEntity2, CallbackInfo ci) {
+	private static void flipje$increaseArrowDamage(LivingEntity livingEntity, Projectile projectile, int i, float f, float g, float h, LivingEntity livingEntity2, CallbackInfo ci) {
 		ItemStack stack = livingEntity.getMainHandItem();
 		if (stack.is(ModdedItems.FLIPJE_BOW)) {
 			if (projectile instanceof Arrow arrow) {

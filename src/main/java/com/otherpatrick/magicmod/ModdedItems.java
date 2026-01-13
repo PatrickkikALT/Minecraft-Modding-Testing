@@ -1,11 +1,7 @@
 package com.otherpatrick.magicmod;
 
-import com.mojang.datafixers.util.Either;
-import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.item.v1.CustomDamageHandler;
+import com.otherpatrick.magicmod.items.FlipjeWand;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.core.Holder;
-import net.minecraft.core.HolderOwner;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -15,25 +11,13 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.EquipmentSlotGroup;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.component.Consumables;
-import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 
-import javax.print.attribute.Attribute;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.UUID;
 import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.stream.Stream;
 
 public class ModdedItems {
     public static <GenericItem extends Item> GenericItem register(String name, Function<Item.Properties, GenericItem> itemFactory, Item.Properties settings) {
@@ -69,6 +53,7 @@ public class ModdedItems {
     public static final Item FLIPJE_HOE = register("flipje_hoe", Item::new, new Item.Properties().hoe(FLIPJE_TOOL_MATERIAL, 1f, 1f));
     public static final Item FLIPJE_SHOVEL = register("flipje_shovel", Item::new, new Item.Properties().shovel(FLIPJE_TOOL_MATERIAL, 1f, 1f));
     public static final BowItem FLIPJE_BOW = register("flipje_bow", BowItem::new, new Item.Properties());
+    public static final FlipjeWand FLIPJE_WAND = register("flipje_wand", FlipjeWand::new, new Item.Properties());
 
     public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS)
@@ -85,6 +70,8 @@ public class ModdedItems {
                 .register((itemGroup) -> itemGroup.accept(ModdedItems.FLIPJE_SHOVEL));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT)
                 .register((itemGroup) -> itemGroup.accept(ModdedItems.FLIPJE_BOW));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
+                .register((itemGroup) -> itemGroup.accept(ModdedItems.FLIPJE_WAND));
     }
 
 }

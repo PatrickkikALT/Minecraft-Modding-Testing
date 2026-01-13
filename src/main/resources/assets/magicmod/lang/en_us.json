@@ -7,5 +7,8 @@
   "item.magicmod.flipje_hoe": "Flipje Hoe",
   "item.magicmod.flipje_pickaxe": "Flipje Pickaxe",
   "item.magicmod.flipje_bow": "Flipje Bow",
+  "item.magicmod.flipje_wand": "Flipje Wand",
+
   "death.attack.flipje": "%1$s zocht flipje :("
+
 }
