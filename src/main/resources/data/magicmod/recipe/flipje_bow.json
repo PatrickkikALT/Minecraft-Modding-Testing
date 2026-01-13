@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " #S",
+    "# S",
+    " #S"
+  ],
+  "key": {
+    "#": "magicmod:flipje",
+    "S": "minecraft:string"
+  },
+  "result": {
+    "id": "magicmod:flipje_bow",
+    "count": 1
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "NNN",
+    "DDD"
+  ],
+  "key": {
+    "#": "minecraft:netherite_block",
+    "N": "minecraft:nether_star",
+    "D": "minecraft:dragon_egg"
+  },
+  "result": {
+    "id": "magicmod:flipje",
+    "count": 1
+  }
+}

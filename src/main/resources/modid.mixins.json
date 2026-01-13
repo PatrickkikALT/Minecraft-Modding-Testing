@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.otherpatrick.magicmod.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "FlipjeBowMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+	}
+}

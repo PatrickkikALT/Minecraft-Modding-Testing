@@ -1,0 +1,11 @@
+{
+  "item.magicmod.flipje": "Flipje",
+  "block.magicmod.flipje_block": "Flipje Block",
+  "item.magicmod.flipje_sword": "Flipje Sword",
+  "item.magicmod.flipje_axe": "Flipje Axe",
+  "item.magicmod.flipje_shovel": "Flipje Shovel",
+  "item.magicmod.flipje_hoe": "Flipje Hoe",
+  "item.magicmod.flipje_pickaxe": "Flipje Pickaxe",
+  "item.magicmod.flipje_bow": "Flipje Bow",
+  "death.attack.flipje": "%1$s zocht flipje :("
+}
